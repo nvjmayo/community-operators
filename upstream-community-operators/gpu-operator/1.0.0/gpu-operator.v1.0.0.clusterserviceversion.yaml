@@ -1,0 +1,37 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: gpu-operator.v1.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: configure and manage GPUs on K8
+  displayName: NVIDIA GPU Operator
+  install:
+    strategy: ""
+  installModes:
+  - supported: true
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - gpu
+  - cuda
+  - compute
+  - operator
+  maintainers:
+  - email: '@nvidia.com'
+    name: placeholder
+  maturity: alpha
+  provider:
+    name: NVIDIA Corporation
+  replaces: gpu-operator.v0.0.0
+  version: 1.0.0
